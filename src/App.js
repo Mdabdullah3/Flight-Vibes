@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from './components/Navbar/Navbar';
+import HeroContent from './components/Home/HeroContent';
 
 const App = () => {
   return (
-    <div>
-      <h1 className='bg-primary'>This is the projects</h1>
+    <div className='font-serif'>
+      <Navbar />
+      <HeroContent />
     </div>
   );
 };
