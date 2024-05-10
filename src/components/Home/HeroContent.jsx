@@ -61,7 +61,7 @@ const HeroContent = () => {
   ];
   return (
     <header className="md:w-10/12 w-11/12 mx-auto mt-10">
-      <section className="flex items-center justify-center">
+      <nav className="flex items-center justify-center">
         <button className="border-primary px-4 py-1 border-2">
           Round Trip
         </button>
@@ -71,19 +71,19 @@ const HeroContent = () => {
         <button className="border-primary px-4 py-1 border-2">
           Multi City
         </button>
-      </section>
+      </nav>
       <hr className="border-t-[1px] mt-6 border-primary" />
       <section>
-        <div className="flex  gap-4 mt-4 items-center flex-wrap">
-          <InputField type="text" placeholder="LHR" />
-          <InputField type="text" placeholder="CDG" />
-          <InputField type="date" placeholder="LHR" />
+        <div className="flex gap-4 mt-4 items-center flex-wrap">
+          <InputField type="text" placeholder="Departure" />
+          <InputField type="text" placeholder="Destination" />
+          <InputField type="date" placeholder="Departure Date" />
           <SelectField name="Date -" options={date} />
           <SelectField name="Date +" options={date} />
           <SelectField name="Any time" options={schedule} />
           <h1 className="text-xl font-bold">+</h1>
-          <SelectField name="Adt" options={flight} />
-          <SelectField name="1" options={date} />
+          <SelectField name="Adults" options={flight} />
+          <SelectField name="Children" options={date} />
           <h1 className="text-xl font-bold">+</h1>
         </div>
       </section>

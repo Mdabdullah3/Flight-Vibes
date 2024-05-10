@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <navbar className="navbar bg-black text-white  ">
+    <nav className="navbar bg-black text-white">
       <div className="md:w-10/12 w-11/12 mx-auto">
         <div className="flex-1">
           <h1 className="text-2xl">Travel Guru</h1>
@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </navbar>
+    </nav>
   );
 };
 
