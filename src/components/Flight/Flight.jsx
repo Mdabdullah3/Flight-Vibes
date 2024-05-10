@@ -2,12 +2,38 @@ import React, { useEffect, useState } from "react";
 
 const Flight = () => {
   const [flight, setFlight] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("flight.json")
-      .then((res) => res.json())
-      .then((data) => setFlight(data));
+    fetchFlightData();
   }, []);
+
+  const fetchFlightData = () => {
+    fetch("flight.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch flight data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setFlight(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
+  };
+
+  if (loading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500">Error: {error}</div>;
+  }
 
   return (
     <div className="md:w-10/12 w-11/12 mx-auto mt-10 overflow-x-auto">
