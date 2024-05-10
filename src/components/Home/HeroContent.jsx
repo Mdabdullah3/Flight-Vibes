@@ -88,7 +88,7 @@ const HeroContent = () => {
         </div>
       </section>
       <hr className="border-t-[1px] mt-4 border-primary" />
-      <section className="mt-4 flex items-center justify-between">
+      <section className="mt-4 flex items-center justify-between flex-wrap">
         <CheckBox label="Extra Options" />
         <div className="flex items-center gap-3">
           <Radio label="Environment" />
