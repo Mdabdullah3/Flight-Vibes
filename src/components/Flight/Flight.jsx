@@ -10,8 +10,8 @@ const Flight = () => {
   }, []);
 
   return (
-    <div className="w-10/12 mx-auto mt-10 overflow-x-auto">
-      <table className="table-auto w-full text-gray-400">
+    <div className="md:w-10/12 w-11/12 mx-auto mt-10 overflow-x-auto">
+      <table className="table-auto w-full mx-auto text-gray-400">
         <thead className="bg-gray-300/60 text-gray-600">
           <tr>
             <th className="py-4">Flight</th>

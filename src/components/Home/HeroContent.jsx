@@ -60,7 +60,7 @@ const HeroContent = () => {
     },
   ];
   return (
-    <header className="w-10/12 mx-auto mt-10">
+    <header className="md:w-10/12 w-11/12 mx-auto mt-10">
       <section className="flex items-center justify-center">
         <button className="border-primary px-4 py-1 border-2">
           Round Trip
@@ -95,7 +95,7 @@ const HeroContent = () => {
           <Radio label="Dummy" />
           <Radio label="PDT" />
         </div>
-        <button className="px-7 py-2 bg-primary text-white rounded-lg">
+        <button className="px-7 py-2 bg-primary text-white rounded-lg mt-2 md:mt-0">
           Search
         </button>
       </section>
